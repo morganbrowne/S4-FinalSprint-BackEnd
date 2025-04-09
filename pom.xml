@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.keyin</groupId>
-    <artifactId>S4-Sprint1-BackEnd</artifactId>
+    <artifactId>S4-FinalSprint-BackEnd</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
