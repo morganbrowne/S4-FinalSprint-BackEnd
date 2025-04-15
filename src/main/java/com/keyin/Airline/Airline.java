@@ -1,6 +1,7 @@
 package com.keyin.Airline;
 
 
+import com.keyin.Flight.Flight;
 import jakarta.persistence.*;
 import java.util.List;
 

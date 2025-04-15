@@ -1,5 +1,7 @@
 package com.keyin.Flight;
 
+import com.keyin.Airline.Airline;
+import com.keyin.Gate.Gate;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 

@@ -1,5 +1,6 @@
 package com.keyin.Gate;
 
+import com.keyin.Flight.Flight;
 import jakarta.persistence.*;
 import java.util.List;
 
