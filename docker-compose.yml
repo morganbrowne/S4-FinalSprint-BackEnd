@@ -1,0 +1,34 @@
+services:
+  app:
+    image: eclipse-temurin:17-jre
+    container_name: spring_boot_app
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./target:/app
+    command: java -jar /app/S4-FinalSprint-BackEnd-1.0-SNAPSHOT.jar
+    depends_on:
+      - mysql
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/airport_management
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=Sprint1Pass
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SPRING_JPA_SHOW_SQL=true
+      - SPRING_JPA_DATABASE_PLATFORM=org.hibernate.dialect.MySQL8Dialect
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_db
+    environment:
+      MYSQL_ROOT_PASSWORD: Sprint1Pass
+      MYSQL_DATABASE: airport_management
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
+    driver: local
+
